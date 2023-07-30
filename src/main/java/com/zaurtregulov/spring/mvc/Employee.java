@@ -3,8 +3,10 @@ package com.zaurtregulov.spring.mvc;
 
 
 import com.zaurtregulov.spring.mvc.validation.CheckEmail;
+import jakarta.validation.constraints.*;
 
-import javax.validation.constraints.*;
+
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -12,10 +14,10 @@ import java.util.Map;
 
 public class Employee {
 
-    @Size (min = 2, message = "name must be min 2 symbols")
+    @Size(min = 2, message = "name must be min 2 symbols")
     private String name;
 
-    @NotBlank (message = "Surname is required field")
+    @NotBlank(message = "Surname is required field")
     private String surname;
 
     @Min(value = 500, message = "Must be greater than 499")
